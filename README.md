@@ -1,4 +1,6 @@
 # codewars
 My completed coding challenges from www.codewars.com
-Started learning Python January 2021, joined Codewars February 2021
-Current rank: 6 Kyu (June 2021)
+
+Each challenge is ranked from <8kyu> (easy, basic, fundamentals) to <1kyu> (hard, expert, compilers).
+
+This repository shows all the work I've done there.
