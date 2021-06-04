@@ -1,0 +1,9 @@
+# Backspaces in a string. https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
+
+def clean_string(s):
+    newstring = ''
+    for i in s:
+        newstring = newstring + i
+        if i == '#':
+            newstring = newstring[:-2]
+    return newstring
