@@ -1,7 +1,0 @@
-# https://www.codewars.com/kata/52c31f8e6605bcc646000082
-
-def two_sum(numbers, target):
-    for index1 in range(len(numbers)):
-        for index2 in range(index1+1, len(numbers)):
-            if numbers[index1] + numbers[index2] == target:
-                return index1, index2

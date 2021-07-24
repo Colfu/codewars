@@ -1,7 +1,0 @@
-# https://www.codewars.com/kata/5583090cbe83f4fd8c000051
-
-def digitize(n):
-    nums_list = list(reversed(str(n)))
-    for i in range(0, len(nums_list)):
-        nums_list[i] = int(nums_list[i])
-    return nums_list

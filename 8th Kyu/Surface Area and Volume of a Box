@@ -1,6 +1,0 @@
-# https://www.codewars.com/kata/565f5825379664a26b00007c
-
-def get_size(w,h,d):
-    area = (2*(h * w)) + (2*(h * d)) + (2*(w * d))
-    volume = h * w * d
-    return [area, volume]
