@@ -27,28 +27,30 @@
 
 
 def autocomplete(input_, dictionary):
-    # print('input_ is:', input_)
-    # print('dictionary list is:', dictionary)
-    filtered_input = ''
-    for char in input_.lower():       # lowercase all input, then
-        if char >= 'a' and char <= 'z':     #weed out the non-alpha symbols
-            filtered_input += char          # add to filtered input     **Cr.7
-    #print(filtered_input)
+    """Take in an input string and a dictionary array and return 
+    the values from the dictionary that start with the input string.
 
-    autocomplete_list = []          # empty list
+    Args:
+        input_ (string): letters used to start a word
+        dictionary (list): valid list of strings
+
+    Returns:
+        list: values from dictonary list that start with input_ string
+    """
+    # Make lowercase, remove non-alpha characters, and store   **Cr.7
+    filtered_input = ''
+    for char in input_.lower():       
+        if char >= 'a' and char <= 'z':     
+            filtered_input += char          
+
+    # Store results
+    autocomplete_list = []          
     for word in dictionary:
-        # find length of input, then compare that length of dictionary word to input
+        # Compare characters in length of input to same length of each dictionary word, if the same, add to results list
         if word[:(len(filtered_input))].lower() == filtered_input.lower():      #**Cr.5 & 6
-            autocomplete_list.append(word)          # add to list  **Cr.1, **Cr.4
+            autocomplete_list.append(word)          #  **Cr.1, **Cr.4
+    # If no matches, return empty list
     if len(autocomplete_list) == 0:         # **Cr.3
         return []
     else:
         return autocomplete_list[:5]        # **Cr.2
-
-
-
-# Test
-# dictionary = ['abnormal', 'Arm-wrestling', 'absolute', 'airplane', 'airport', 'amazing','apple', 'ball']
-
-# print(autocomplete('ai', dictionary), ['should be:', 'airplane','airport'])
-# print(autocomplete('-a', dictionary), ['should be:', 'abnormal','Arm-wrestling','absolute','airplane','airport'])
