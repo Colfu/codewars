@@ -11,14 +11,23 @@
 # if case is cap, add with a preceding space
 # unsure whether it includes upper camel case as well, so sort out 1st letter in case
 
-def solution(s):
-    new_string = s[0]               # start new string with index 0 so the following does not try to add space
-    for x in s[1:]:                 # everything except the first letter in case it's a cap
+def solution(camelCase_string):
+    """ Break up camel casing, using a space between words.
+
+    Args:
+        camelCase_sting ([string]): Some words using camelCase
+
+    Returns:
+        new_string [string]: String with camelCase removed
+    """
+    # start new string with index 0 so the following does not try to add space
+    new_string = s[0]               
+    
+    # Ignore 1st letter incase of cap, add each letter to new string, and if Capital then add preceeding space
+    for x in s[1:]:                 
         if x.islower():
-            new_string += x         # add to new string
+            new_string += x         
         else:
-            new_string += ' ' + x       # add with preceding space
+            new_string += ' ' + x       
     return new_string
 
-
-# print(solution("HelloWorld"), "should be: Hello World")
