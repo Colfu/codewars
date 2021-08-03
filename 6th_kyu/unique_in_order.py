@@ -1,14 +1,14 @@
 def unique_in_order(list_of_args):
     """
-    Turns a sequence into list without any same value elements next to each other, preserving the original order.
+    Turn a sequence into list without any same value elements next to each other, preserving the original order.
 
-    :param: list_of_args - input is list of arguments, str or int
+    :param: list_of_args: input is list of arguments, str or int
     :return: final_list_of_items
     """
-    # if input is empty, return empty list
+    # If input is empty, return empty list
     if len(list_of_args) < 1: return []
     else:
-        # setup 1st item to compare 2nd against
+        # Setup 1st item to compare 2nd against
         current_item = list_of_args[0]
         final_list_of_items = [list_of_args[0]]
         #  Go through each item, pass if same as current_item, otherwise add to final_list_of_items
